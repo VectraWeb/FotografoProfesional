@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Peter Parker - Fotógrafa Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-camera"></i>
+                <span>Sofia Martínez</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#gallery" class="nav-link">Galería</a>
+                <a href="#about" class="nav-link">Sobre Mí</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hero Background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Capturando
+                <span class="hero-accent">Momentos Únicos</span>
+            </h1>
+            <p class="hero-subtitle">
+                Fotógrafa profesional especializada en bodas, retratos y eventos especiales
+            </p>
+            <button class="hero-btn" onclick="scrollToSection('gallery')">
+                Ver Mi Trabajo
+            </button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mi Galería</h2>
+                <p class="section-subtitle">
+                    Una colección de mis trabajos más destacados, capturando la esencia de cada momento especial
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos (12)</button>
+                <button class="filter-btn" data-filter="wedding">Bodas (3)</button>
+                <button class="filter-btn" data-filter="portrait">Retratos (3)</button>
+                <button class="filter-btn" data-filter="nature">Naturaleza (3)</button>
+                <button class="filter-btn" data-filter="events">Eventos (3)</button>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="photo-grid" id="photo-grid">
+                <!-- Wedding Photos -->
+                <div class="photo-item wedding" data-title="Ceremonia Romántica">
+                    <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ceremonia Romántica">
+                    <div class="photo-overlay">
+                        <h3>Ceremonia Romántica</h3>
+                    </div>
+                </div>
+                <div class="photo-item wedding large" data-title="Baile de Boda">
+                    <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Baile de Boda">
+                    <div class="photo-overlay">
+                        <h3>Baile de Boda</h3>
+                    </div>
+                </div>
+                <div class="photo-item wedding" data-title="Retrato de Novia">
+                    <img src="https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retrato de Novia">
+                    <div class="photo-overlay">
+                        <h3>Retrato de Novia</h3>
+                    </div>
+                </div>
+
+                <!-- Portrait Photos -->
+                <div class="photo-item portrait" data-title="Retrato Profesional">
+                    <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retrato Profesional">
+                    <div class="photo-overlay">
+                        <h3>Retrato Profesional</h3>
+                    </div>
+                </div>
+                <div class="photo-item portrait" data-title="Retrato Creativo">
+                    <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retrato Creativo">
+                    <div class="photo-overlay">
+                        <h3>Retrato Creativo</h3>
+                    </div>
+                </div>
+                <div class="photo-item portrait large" data-title="Retrato de Estudio">
+                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retrato de Estudio">
+                    <div class="photo-overlay">
+                        <h3>Retrato de Estudio</h3>
+                    </div>
+                </div>
+
+                <!-- Nature Photos -->
+                <div class="photo-item nature" data-title="Paisaje Montañoso">
+                    <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paisaje Montañoso">
+                    <div class="photo-overlay">
+                        <h3>Paisaje Montañoso</h3>
+                    </div>
+                </div>
+                <div class="photo-item nature" data-title="Sendero del Bosque">
+                    <img src="https://images.pexels.com/photos/1578662/pexels-photo-1578662.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sendero del Bosque">
+                    <div class="photo-overlay">
+                        <h3>Sendero del Bosque</h3>
+                    </div>
+                </div>
+                <div class="photo-item nature large" data-title="Atardecer en el Océano">
+                    <img src="https://images.pexels.com/photos/1834399/pexels-photo-1834399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Atardecer en el Océano">
+                    <div class="photo-overlay">
+                        <h3>Atardecer en el Océano</h3>
+                    </div>
+                </div>
+
+                <!-- Events Photos -->
+                <div class="photo-item events large" data-title="Evento Corporativo">
+                    <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Evento Corporativo">
+                    <div class="photo-overlay">
+                        <h3>Evento Corporativo</h3>
+                    </div>
+                </div>
+                <div class="photo-item events" data-title="Celebración de Cumpleaños">
+                    <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Celebración de Cumpleaños">
+                    <div class="photo-overlay">
+                        <h3>Celebración de Cumpleaños</h3>
+                    </div>
+                </div>
+                <div class="photo-item events" data-title="Festival de Música">
+                    <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Festival de Música">
+                    <div class="photo-overlay">
+                        <h3>Festival de Música</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p class="about-description">
+                        Soy Sofia Martínez, una fotógrafa apasionada con más de 8 años de experiencia 
+                        capturando los momentos más importantes de la vida. Mi estilo se caracteriza por 
+                        la naturalidad, la elegancia y la atención al detalle.
+                    </p>
+                    <p class="about-description">
+                        Especializada en fotografía de bodas, retratos y eventos corporativos, mi objetivo 
+                        es crear imágenes que no solo sean hermosas, sino que también cuenten una historia 
+                        única y emocional.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Bodas Fotografiadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Sesiones Realizadas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3764579/pexels-photo-3764579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sofia Martínez">
+                    <div class="camera-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¡Trabajemos Juntos!</h2>
+                <p class="section-subtitle">
+                    ¿Tienes un evento especial que necesita ser capturado? Me encantaría ser parte de tu historia.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3 class="contact-title">Información de Contacto</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">sofia.martinez@fotografia.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-label">Teléfono</div>
+                            <div class="contact-value">+34 123 456 789</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-label">Ubicación</div>
+                            <div class="contact-value">Madrid, España</div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <h4 class="social-title">Sígueme en:</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 class="form-title">Envíame un Mensaje</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Cuéntame sobre tu evento o sesión..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-camera"></i>
+                    <span>Sofia Martínez</span>
+                </div>
+                <p class="footer-description">
+                    Capturando momentos únicos y creando recuerdos que perdurarán para toda la vida.
+                </p>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Sofia Martínez Fotografía. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
